@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+@import url('./normalize.css');
+
+:root {
+  --main-bg: #fff;
+  --text-color: #000;
+
+  --transition-duration: .3s;
+  --transition-timing-function: ease;
+
+  --primary-color: #8b2de2;
+  --primary-color-light: #a155e8;
+
+  --container-max-width: 1024px;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-color);
+  background-color: var(--main-bg);
+}
