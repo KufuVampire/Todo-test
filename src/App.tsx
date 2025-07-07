@@ -4,6 +4,7 @@ import { StorageService } from './services';
 import type { ITodoList } from './types';
 
 import styles from './styles.module.css';
+import { cn } from './utils';
 
 type FilterTypes = 'All' | 'Active' | 'Completed';
 
@@ -62,23 +63,23 @@ export function App() {
 						<div className={styles.wrapper}>
 							<p className={styles.count}>Осталось: {completedCount}</p>
 							<ul
-								className={styles.btn__wrapper}
+								className={styles.list}
 								onClick={handleClick}>
-								<li>
+								<li className={styles.item}>
 									<button
 										className={styles.btn}
 										data-filter={'All'}>
 										Все
 									</button>
 								</li>
-								<li>
+								<li className={styles.item}>
 									<button
 										className={styles.btn}
 										data-filter={'Active'}>
 										Активные
 									</button>
 								</li>
-								<li>
+								<li className={styles.item}>
 									<button
 										className={styles.btn}
 										data-filter={'Completed'}>
@@ -87,7 +88,7 @@ export function App() {
 								</li>
 							</ul>
 							<button
-								className={styles.btn}
+								className={cn([styles.btn, styles.clear__btn])}
 								onClick={handleClear}>
 								Очистить
 							</button>

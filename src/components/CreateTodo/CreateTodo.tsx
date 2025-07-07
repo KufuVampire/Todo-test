@@ -22,6 +22,7 @@ export const CreateTodo = ({ todos, setTodos }: Props) => {
 
 		setTodos((prev) => [...prev, newTodo]);
 		StorageService.setItem('todos', [...todos, newTodo]);
+		setValue('')
 	};
 
 	return (

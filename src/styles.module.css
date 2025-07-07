@@ -3,9 +3,10 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 16px;
+	row-gap: 10px;
 }
 
-.btn__wrapper {
+.list {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -25,4 +26,33 @@
 
 .btn:hover {
 	background-color: var(--primary-color-light);
+}
+
+@media (max-width: 600px) {
+	.wrapper {
+		flex-direction: column;
+		align-items: start;
+		
+	}
+
+	.count {
+		order: 3;
+	}
+
+	.list {
+		width: 100%;
+		order: 2;
+	}
+
+	.item {
+		width: 100%;
+	}
+
+	.btn {
+		width: 100%;
+	}
+
+	.clear__btn {
+		order: 1;
+	}
 }
